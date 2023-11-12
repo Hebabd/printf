@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 	int (*func)(va_list) = NULL;
 
 	va_start(list, format);
-
 	while (*format)
 	{
 		if (*format == '%' && *(format + 1) != '%')
@@ -46,8 +45,6 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
-
 	va_end(list);
-
 	return (count);
 }
