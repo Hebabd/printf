@@ -22,7 +22,7 @@ typedef struct format
 int _putchar(char c);
 int print_char(va_list list);
 int _strlen(char *str);
-int _strlenc(const char *str);
+int _strlen(const char *str);
 int print_37(void);
 int print_string(va_list list);
 int print_numbers(unsigned int num);

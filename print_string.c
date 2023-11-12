@@ -9,21 +9,24 @@
 
 int print_string(va_list list)
 {
-	int i = 0, value;
-	char *str = va_arg(list, char *);
+	char *str;
+	int i;
+	int length;
 
-	if (!str)
-		str = NULL;
-
-	while (str[i])
+	str = va_arg(list, char *);
+	if (str == NULL)
 	{
-		value = _putchar(str[i]);
-
-		if (value == -1)
-			return (-1);
-
-		i++;
+		str = "(NULL)";
+		length = _strlen(str);
+		for (i = 0; i < length; i++)
+			_putchar(str[i]);
+		return (length);
 	}
-
-	return (i);
+	else
+	{
+		length = _strlen(str);
+		for (i = 0; i < length; i++)
+			_putchar(str[i]);
+		return (length);
+	}
 }

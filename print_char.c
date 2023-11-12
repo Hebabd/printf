@@ -9,15 +9,9 @@
 
 int print_char(va_list list)
 {
+	char str;
 
-	char c = va_arg(list, int);
-	int value = _putchar(c);
-
-
-
-	if (value == -1)
-		return (-1);
-
-
+	str  = va_arg(list, int);
+	_putchar(str);
 	return (1);
 }
