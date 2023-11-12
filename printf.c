@@ -10,37 +10,40 @@
 
 int _printf(const char *format, ...)
 {
-	va_list args;
-	int i, count = 0;
-
-	va_start(args, format);
-
 	match m[] = {
 		{"%c", printf_char},
 		{"%s", printf_string},
 		{"%%", print_37}
-
 	};
 
-	for (i = 0; format[i] != '\0'; i++)
-	{
-		if (format[i] == '%')
-		{
-			i++;
-			for (int j = 0; j < sizeof(m) / sizeof(m[0]); j++)
-			{
-				count += m[j].func(args);
-				break;
-			}
-		}
-	}
-	else
-	{
-		_putchar(format[i]);
-		count++;
-	}
-}
+	va_list args;
+	int i = 0, len = 0;
+	int j;
 
-va_end(args);
-return (count);
+	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+
+
+	while (format[i] != '\0')
+	{
+		j = 2;
+		while (j >= 0)
+		{
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			{
+				len += m[j].f(args);
+				i +=  2;
+				goto Here;
+			}
+
+			j--;
+		}
+		_putchar(format[i]);
+		i++;
+		len++;
+	}
+Here:
+	va_end(args);
+	return (len);
 }
