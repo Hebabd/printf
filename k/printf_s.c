@@ -6,7 +6,7 @@ include "main.h"
  * Return: the length of the string.
  */
 
-int printf_string(va_list val)
+int printf_string(va_list list)
 {
         char *str;
         int i;

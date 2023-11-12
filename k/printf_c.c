@@ -6,7 +6,7 @@
  * @val: rguments.
  * Return: 1.
  */
-int printf_char(va_list val)
+int printf_char(va_list list)
 {
         char str;
 
