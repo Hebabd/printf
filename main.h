@@ -21,8 +21,8 @@ typedef struct format
 
 int _putchar(char c);
 int printf_char(va_list list);
-int _strlen(charstr);
-int _strlenc(const char str);
+int _strlen(char *str);
+int _strlenc(const char *str);
 int print_37(void);
 int printf_string(va_list list);
 int print_numbers(unsigned int num);
