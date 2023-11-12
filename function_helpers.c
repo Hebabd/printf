@@ -37,3 +37,23 @@ int count_numbers(unsigned int num)
 
 	return (count);
 }
+
+/**
+* count_binary - count how many digits.
+* @num: the number.
+*
+* Return: Int.
+*/
+
+int count_binary(unsigned int num)
+{
+	int count = 0;
+
+	while (num > 0)
+	{
+		count++;
+		num /= 2;
+	}
+
+	return (count);
+}
