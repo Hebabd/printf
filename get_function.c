@@ -16,15 +16,17 @@ int (*get_function(const char *specifier))(va_list)
 		{"c", print_char},
 		{"d", print_digit},
 		{"i", print_digit},
-		{"b", print_b},
-		{"o", print_o},
-		{"u", print_u},
-		/* {"x", print_x},
-		{"X", print_X},
-		{"p", print_ptr},
-		{"R", rot13},
-		{"r", print_rev},
-		{"F", print_F}, */
+		{"b", print_binary},
+		{"o", print_octal},
+		{"u", print_unsigned},
+		/**
+		 * {"x", print_x},
+		 * {"X", print_X},
+		 * {"p", print_ptr},
+		 * {"R", rot13},
+		 * {"r", print_rev},
+		 * {"F", print_F},
+		 */
 		{NULL, NULL}
 	};
 

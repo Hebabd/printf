@@ -35,5 +35,6 @@ int print_octal(va_list list);
 int count_octal(unsigned int num);
 int (*get_function(const char *specifier))(va_list);
 
+int _printf(const char *format, ...);
 
 #endif /* _MAIN_ */
