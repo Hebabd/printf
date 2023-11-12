@@ -39,7 +39,7 @@ int count_numbers(unsigned int num)
 }
 
 /**
-* count_binary - count how many digits.
+* count_binary - count how many binary digits.
 * @num: the number.
 *
 * Return: Int.
@@ -53,6 +53,26 @@ int count_binary(unsigned int num)
 	{
 		count++;
 		num /= 2;
+	}
+
+	return (count);
+}
+
+/**
+* count_octal - count how many octal digits.
+* @num: the number
+*
+* Return: Int.
+*/
+
+int count_octal(unsigned int num)
+{
+	int count = 0;
+
+	while (num > 0)
+	{
+		count++;
+		num /= 8;
 	}
 
 	return (count);

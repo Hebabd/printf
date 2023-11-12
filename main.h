@@ -30,6 +30,9 @@ int count_numbers(unsigned int num);
 int print_digit(va_list list);
 int count_binary(unsigned int num);
 int print_binary(va_list list);
+int print_unsigned(va_list list);
+int print_octal(va_list list);
+int count_octal(unsigned int num);
 int (*get_function(const char *specifier))(va_list);
 
 
