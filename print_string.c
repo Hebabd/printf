@@ -17,14 +17,13 @@ int print_string(va_list list)
 	if (str == NULL)
 		str = "(null)";
 
-	while (*str)
+	while (str[i] != '\0')
 	{
-		value = _putchar(*str);
+		value = _putchar(str[i]);
 
-		if (value == -1)
+		if (!value)
 			return (-1);
 		i++;
-		str++;
 	}
 
 	return (i);

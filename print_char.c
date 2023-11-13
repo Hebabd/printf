@@ -9,13 +9,13 @@
 
 int print_char(va_list list)
 {
-	int i = 1, value;
+	int value;
 	char my_char = va_arg(list, int);
 
 	value = _putchar(my_char);
 
-	if (value == -1)
+	if (!value)
 		return (-1);
 
-	return (i);
+	return (1);
 }
