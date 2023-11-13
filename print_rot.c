@@ -40,7 +40,7 @@ int print_rot(va_list list)
 		i++;
 	}
 
-	for (i = 0; enc[i]; i++)
+	for (i = 0; enc[i] != '\0'; i++)
 		_putchar(enc[i]);
 
 	free(enc);
