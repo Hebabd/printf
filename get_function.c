@@ -25,9 +25,6 @@ int (*get_function(const char *specifier))(va_list)
 		{"S", print_exc_string},
 		{"r", print_rev},
 		{"R", print_rot},
-		/**
-		 * {"F", print_F},
-		 */
 		{NULL, NULL}
 	};
 
