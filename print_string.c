@@ -15,11 +15,9 @@ int print_string(va_list list)
 	int i = 0, value;
 
 	if (str == NULL)
-	{
 		str = "(null)";
-	}
 
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		value = _putchar(str[i]);
 
@@ -27,5 +25,6 @@ int print_string(va_list list)
 			return (-1);
 		i++;
 	}
+
 	return (i);
 }

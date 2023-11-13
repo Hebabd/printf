@@ -20,13 +20,3 @@ int print_char(va_list list)
 
 	return (i);
 }
-/**
- * print_percentage  - %
- *
- * Return: 1.
- */
-int print_percentage(void)
-{
-	_putchar('%');
-	return (1);
-}
