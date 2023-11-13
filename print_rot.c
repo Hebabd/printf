@@ -23,7 +23,7 @@ int print_rot(va_list list)
 		{
 			if (s[i] == x[j])
 			{
-				s[i] = y[j];
+				enc[i] = y[j];
 				break;
 			}
 		}
