@@ -9,12 +9,16 @@
 
 int print_char(va_list list)
 {
-	unsigned char my_char;
+	int i = 0, value;
+	char my_char = va_arg(list, int);
 
+	value = _putchar(my_char);
 
-	my_char  = va_arg(list, int);
-	_putchar(my_char);
-	return (1);
+	if (value == -1)
+		return (-1);
+	i++;
+
+	return (i);
 }
 /**
  * print_percentage  - %

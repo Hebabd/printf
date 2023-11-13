@@ -20,7 +20,7 @@ int print_pointer(va_list list)
 	{
 		for (i = 0; s[i] != '\0'; i++)
 			_putchar(s[i]);
-		return (i); 
+		return (i);
 	}
 
 	a = (unsigned long int)p;

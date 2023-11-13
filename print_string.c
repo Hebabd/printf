@@ -11,18 +11,20 @@
 
 int print_string(va_list list)
 {
-	char *str;
-	int i;
+	char *str = va_arg(list, char *);
+	int i, value;
 
-	str = va_arg(list, char *);
 	if (str == NULL)
 	{
-		str = "(NULL)";
+		str = "(null)";
 	}
 
 	while (str[i])
 	{
-		_putchar(str[i]);
+		value = _putchar(str[i]);
+
+		if (value == -1)
+			return (-1);
 		i++;
 	}
 	return (i);
