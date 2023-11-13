@@ -19,10 +19,11 @@ int (*get_function(const char *specifier))(va_list)
 		{"b", print_binary},
 		{"o", print_octal},
 		{"u", print_unsigned},
+		{"x", print_x},
+		{"X", print_X},
+		{"p", print_pointer},
+		{"S", print_exc_string},
 		/**
-		 * {"x", print_x},
-		 * {"X", print_X},
-		 * {"p", print_ptr},
 		 * {"R", rot13},
 		 * {"r", print_rev},
 		 * {"F", print_F},
@@ -33,6 +34,7 @@ int (*get_function(const char *specifier))(va_list)
 	while (ops[i].specifier)
 	{
 		if (ops[i].specifier[0] == *specifier)
+
 			return (ops[i].f);
 
 		i++;
