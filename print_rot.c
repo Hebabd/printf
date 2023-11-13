@@ -14,8 +14,8 @@ int print_rot(va_list list)
 	char x[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
 	char y[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
 
-	if (!s)
-		return (-1);
+	if (s == NULL)
+		s = "(null)";
 
 	while (s[i] != '\0')
 	{
