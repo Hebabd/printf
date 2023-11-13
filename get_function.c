@@ -24,8 +24,8 @@ int (*get_function(const char *specifier))(va_list)
 		{"p", print_pointer},
 		{"S", print_exc_string},
 		{"r", print_rev},
+		{"R", print_rot},
 		/**
-		 * {"R", rot13},
 		 * {"F", print_F},
 		 */
 		{NULL, NULL}

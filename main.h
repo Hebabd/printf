@@ -20,7 +20,7 @@ typedef struct format
 } match;
 
 int _putchar(char c);
-int _puts(char *str);
+int _strlen(char *s);
 int print_char(va_list list);
 int print_string(va_list list);
 int print_numbers(unsigned int num);
@@ -38,6 +38,7 @@ int print_hex_ext(unsigned long int num);
 int print_exc_string(va_list list);
 int print_pointer(va_list list);
 int print_rev(va_list list);
+int print_rot(va_list args);
 
 int (*get_function(const char *specifier))(va_list);
 int _printf(const char *format, ...);
