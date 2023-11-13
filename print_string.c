@@ -21,7 +21,7 @@ int print_string(va_list list)
 	{
 		value = _putchar(str[i]);
 
-		if (!value)
+		if (value == -1)
 			return (-1);
 		i++;
 	}

@@ -14,7 +14,7 @@ int print_char(va_list list)
 
 	value = _putchar(my_char);
 
-	if (!value)
+	if (value == -1)
 		return (-1);
 
 	return (1);

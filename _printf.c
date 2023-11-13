@@ -25,7 +25,6 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			func = get_function(format);
-
 			if (*format == '\0')
 				return (-1);
 			else if (func == NULL)
