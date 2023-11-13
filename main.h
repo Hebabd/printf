@@ -20,6 +20,7 @@ typedef struct format
 } match;
 
 int _putchar(char c);
+int _puts(char *str);
 int print_char(va_list list);
 int _strlen(char *str);
 int _strlenc(const char *str);
