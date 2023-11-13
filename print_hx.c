@@ -2,7 +2,7 @@
 
 
 /**
- * print_x - converts to hex
+ * print_x- converts to hex
  * @list: va_list containing the arguments
  * Return: counter
  */
