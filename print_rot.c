@@ -9,7 +9,7 @@
 
 int print_rot(va_list list)
 {
-	int i = 0, j;
+	int i, j;
 	char *s = va_arg(list, char *);
 	char x[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
 	char y[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
@@ -17,24 +17,19 @@ int print_rot(va_list list)
 
 	enc = malloc((_strlen(s) + 1) * sizeof(char));
 
-	while (s[i] != '\0')
+	for (i = 0, s[i] != '\0', i++)
 	{
-		j = 0;
-
-		while (x[j] != '\0')
+		for (j = 0; x[j] != '\0'; j++)
 		{
 			if (s[i] == x[j])
 			{
 				s[i] = y[j];
 				break;
 			}
-
-			j++;
 		}
 
 		if (s[i] != x[j])
 			enc[i] = s[i];
-		i++;
 	}
 
 	for (i = 0; enc[i] != '\0'; i++)
