@@ -28,8 +28,15 @@ int print_rot(va_list list)
 			}
 		}
 
+		if (s[i] != x[j])
+			enc[i] = str[i];
+
 		i++;
 	}
 
+	for (i = 0; enc[i]; i++)
+		_putchar(enc[i]);
+
+	free(enc);
 	return (i);
 }
