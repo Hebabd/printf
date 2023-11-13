@@ -32,7 +32,7 @@ int print_hex_ext(unsigned long int num)
 	{
 		if (array[i] > 9)
 		{
-			array[i] += 87;
+			array[i] += 39;
 		}
 		_putchar(array[i] + '0');
 	}
