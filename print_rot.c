@@ -15,10 +15,10 @@ int print_rot(va_list list)
 	char y[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
 	char *enc = NULL;
 
-	if (s == NULL)
-		return (-1);
-
 	enc = malloc((_strlen(s) + 1) * sizeof(char));
+
+	if (!s || !enc)
+		return (-1);
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
