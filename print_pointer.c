@@ -24,8 +24,10 @@ int print_pointer(va_list list)
 	}
 
 	a = (unsigned long int)p;
+
 	_putchar('0');
 	_putchar('x');
+
 	b = print_hex_ext(a);
 
 	return (b + 2);
