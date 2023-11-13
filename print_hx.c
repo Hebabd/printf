@@ -16,18 +16,17 @@ int print_x(va_list list)
 
 	while (num / 16 != 0)
 	{
-		num = num / 16;
+	 num /= 16;
 	       counter++;
 	}
 counter++;
 array = malloc(sizeof(int) * counter);
-if (array == NULL)
-	return (-1);
+
 
 for (i = 0; i < counter; i++)
 {
 	array[i] = ten % 16;
-	ten = ten / 16;
+	ten /= 16;
 }
 for (i = counter - 1; i >= 0; i--)
 {
