@@ -16,7 +16,7 @@ int print_rot(va_list list)
 	char *enc = NULL;
 
 	if (s == NULL)
-		return (-1);
+		s = "(null)";
 
 	enc = malloc((_strlen(s) + 1) * sizeof(char));
 
