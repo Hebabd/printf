@@ -17,7 +17,7 @@ int print_rot(va_list list)
 
 	enc = malloc((_strlen(s) + 1) * sizeof(char));
 
-	for (i = 0, s[i] != '\0', i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; x[j] != '\0'; j++)
 		{
