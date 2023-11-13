@@ -15,20 +15,22 @@ int print_rot(va_list list)
 	char y[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
 	char *enc = NULL;
 
-	if (s == NULL)
-		s = "(null)";
-
 	enc = malloc((_strlen(s) + 1) * sizeof(char));
+
+	if (!s || !enc)
+		return (-1);
 
 	while (s[i] != '\0')
 	{
-		for (j = 0; x[j] != '\0'; j++)
+		while (x[j] != '\0')
 		{
 			if (s[i] == x[j])
 			{
 				enc[i] = y[j];
 				break;
 			}
+
+			j++;
 		}
 
 		if (s[i] != x[j])
