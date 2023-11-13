@@ -4,6 +4,9 @@
  * _printf - Produces output according to a format.
  * @format: The given string.
  *
+ * Description: This program emulates the functionality of the standard
+ * printf function.
+ *
  * Return: Int.
  */
 
@@ -13,6 +16,8 @@ int _printf(const char *format, ...)
 	int count = 0;
 	int (*func)(va_list) = NULL;
 
+	if (!format || !format[0])
+		return (-1);
 	va_start(list, format);
 	while (*format)
 	{
