@@ -2,7 +2,7 @@
 
 
 /**
- * print_hex_extr  - converts to hex
+ * print_hex_ext  - converts to hex
  * @num: value  containing the arguments
  * Return: counter
  */

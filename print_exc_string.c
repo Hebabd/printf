@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_ex_string - prints exclusive string
+ * print_exc_string - prints exclusive string
  * @list: value
  * Return: number of characters printed
  */

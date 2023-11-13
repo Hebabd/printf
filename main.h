@@ -37,6 +37,7 @@ int print_HEX(unsigned int num);
 int print_hex_ext(unsigned long int num);
 int print_exc_string(va_list list);
 int print_pointer(va_list list);
+int print_rev(va_list list);
 
 int (*get_function(const char *specifier))(va_list);
 int _printf(const char *format, ...);
