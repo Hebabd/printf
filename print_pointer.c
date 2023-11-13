@@ -12,7 +12,7 @@ int print_pointer(va_list list)
 	void *p;
 	/* char *s = "(nil)"; */
 	long int a;
-	int i, b;
+	int /*i,*/ b;
 
 	p = va_arg(list, void *);
 	if (p == NULL)
