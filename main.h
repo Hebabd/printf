@@ -31,6 +31,8 @@ int print_unsigned(va_list list);
 int print_octal(va_list list);
 int count_octal(unsigned int num);
 int (*get_function(const char *specifier))(va_list);
+int print_x(va_list list);
+int print_X(va_list list);
 
 int _printf(const char *format, ...);
 
