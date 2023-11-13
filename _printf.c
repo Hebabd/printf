@@ -13,8 +13,6 @@ int _printf(const char *format, ...)
 	int count = 0;
 	int (*func)(va_list) = NULL;
 
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
 	va_start(list, format);
 	while (*format)
 	{
