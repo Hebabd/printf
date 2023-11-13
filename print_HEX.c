@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * print_HEX- converts to hex
- * @num: valu econtaining the arguments
- * Return: counter
+ * print_HEX - converts to hex.
+ * @num: The value containing the arguments.
+ *
+ * Return: Int.
  */
 
 int print_HEX(unsigned int num)
@@ -14,8 +15,8 @@ int print_HEX(unsigned int num)
 
 	while (num / 16 != 0)
 	{
-	num /= 16;
-	counter++;
+		num /= 16;
+		counter++;
 	}
 	counter++;
 
@@ -23,14 +24,14 @@ int print_HEX(unsigned int num)
 
 	for (i = 0; i < counter; i++)
 	{
-	array[i] = ten % 16;
-	ten /= 16;
+		array[i] = ten % 16;
+		ten /= 16;
 	}
 	for (i = counter - 1; i >= 0; i--)
 	{
-	if (array[i] > 9)
-	array[i] = array[i] + 7;
-	_putchar(array[i] + '0');
+		if (array[i] > 9)
+			array[i] = array[i] + 7;
+		_putchar(array[i] + '0');
 	}
 	free(array);
 	return (counter);

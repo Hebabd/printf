@@ -21,8 +21,9 @@ int (*get_function(const char *specifier))(va_list)
 		{"u", print_unsigned},
 		{"x", print_x},
 		{"X", print_X},
-		 /**
-		 * {"p", print_ptr},
+		{"p", print_pointer},
+		{"S", print_exc_string},
+		/**
 		 * {"R", rot13},
 		 * {"r", print_rev},
 		 * {"F", print_F},
@@ -40,4 +41,4 @@ int (*get_function(const char *specifier))(va_list)
 	}
 
 	return (NULL);
-i}
+}

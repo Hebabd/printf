@@ -30,12 +30,14 @@ int print_binary(va_list list);
 int print_unsigned(va_list list);
 int print_octal(va_list list);
 int count_octal(unsigned int num);
-int (*get_function(const char *specifier))(va_list);
 int print_x(va_list list);
 int print_X(va_list list);
 int print_HEX(unsigned int num);
-int print_ex_string(va_list list);
+int print_hex_ext(unsigned long int num);
+int print_exc_string(va_list list);
+int print_pointer(va_list list);
 
+int (*get_function(const char *specifier))(va_list);
 int _printf(const char *format, ...);
 
 #endif /* _MAIN_ */

@@ -6,7 +6,7 @@
  * Return: number of characters printed
  */
 
-int print_ex_string(va_list list)
+int print_exc_string(va_list list)
 {
 	char *s;
 	int i, len = 0;

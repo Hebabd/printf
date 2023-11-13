@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * print_pointer - convert and print.
+ * @list: The given arguments.
+ *
+ * Return: Int.
+ */
+
 int print_pointer(va_list list)
 {
 	void *p;
@@ -17,6 +24,7 @@ int print_pointer(va_list list)
 	a = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	b = print_hex_ex(a);
+	b = print_hex_ext(a);
 
+	return (b + 2);
 }

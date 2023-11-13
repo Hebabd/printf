@@ -16,8 +16,8 @@ int print_x(va_list list)
 
 	while (num / 16 != 0)
 	{
-	 num /= 16;
-	       counter++;
+		num /= 16;
+		counter++;
 	}
 	counter++;
 
@@ -27,19 +27,19 @@ int print_x(va_list list)
 	for (i = 0; i < counter; i++)
 	{
 
-	array[i] = ten % 16;
-	ten /= 16;
+		array[i] = ten % 16;
+		ten /= 16;
 
 	}
 
 	for (i = counter - 1; i >= 0; i--)
 	{
-	if (array[i] > 9)
-	{
-		array[i] += 39;
-	}
-	
-	_putchar(array[i] + '0');
+		if (array[i] > 9)
+		{
+			array[i] += 39;
+		}
+
+		_putchar(array[i] + '0');
 	}
 
 	free(array);
