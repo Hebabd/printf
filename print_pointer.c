@@ -14,7 +14,7 @@ int print_pointer(va_list list)
 	long int a;
 	int i, b;
 
-	p = va_arg(list, void *);
+	p = va_arg(list, void*);
 
 	if (p == NULL)
 	{
