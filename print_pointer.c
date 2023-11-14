@@ -1,49 +1,45 @@
 #include "main.h"
 
 /**
- * print_pointer - convert and print.
- * @ptr: the ddress of the pointer to print
- * @count: the number of bytes printed
+ * print_p_helper - convert and print ptr.
+ * @ptr: The pointer.
+ * @count: The number.
  *
- *
- * Description: this function is almost identical to print_lowerHex except
- * it takes s=an unsigned long int instead of an int.
- *
- * Return: void.
+ * Return: Void.
  */
 
-void print_pointer(unsigned long ptr, int *count)
+void print_p_helper(unsigned long ptr, int *count)
 {
-	int retval;
+	int value;
 
 	if (ptr > 15)
-		print_pointer(ptr >> 4, count);
+		print_p_helper(ptr >> 4, count);
 
 	if (*count == -1)
 		return;
 
 	if ((ptr & 15) < 10)
-		retval = _putchar('0' + (ptr & 15));
+		value = _putchar('0' + (ptr & 15));
 	else
-		retval = _putchar('a' + (ptr & 15) % 10);
+		value = _putchar('a' + (ptr & 15) % 10);
 
-	if (retval == -1)
+	if (value == -1)
 		*count = -1;
 	else
-		*count += retval;
+		*count += value;
 }
 
 /**
- * print_p - print a pointer address in lowercase hexadecimal format
- * @args: va_list containing the pointer to print as the next element
+ * print_pointer - print a pointer address.
+ * @list: The arugments.
  *
- * Return: the number of bytes printed
+ * Return: Int.
  */
 
-int print_p(va_list args)
+int print_pointer(va_list list)
 {
 	int count = 0;
-	void *ptr = va_arg(args, void *);
+	void *ptr = va_arg(list, void *);
 
 	if (!ptr)
 		return (_printf("(nil)"));
@@ -53,7 +49,7 @@ int print_p(va_list args)
 	if (count == -1)
 		return (count);
 
-	print_pointer((unsigned long) ptr, &count);
+	print_p_helper((unsigned long) ptr, &count);
 
 	return (count);
 }

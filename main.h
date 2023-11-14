@@ -36,8 +36,8 @@ int print_X(va_list list);
 int print_HEX(unsigned int num);
 int print_hex_ext(unsigned long int num);
 int print_exc_string(va_list list);
-void  print_pointer(unsigned long ptr, int *count);
-int print_p(va_list args);
+void print_p_helper(unsigned long ptr, int *count);
+int print_pointer(va_list list);
 int print_rev(va_list list);
 int print_rot(va_list args);
 
