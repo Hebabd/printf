@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 /**
- * struct type - Struct type.
+ * struct format - Struct type.
  *
  * @specifier: The specifier.
  * @f: The function associated.
@@ -16,7 +16,7 @@
 typedef struct format
 {
 	char *specifier;
-	int (*f)(va_list); 
+	int (*f)(va_list);
 } match;
 
 int _putchar(char c);
