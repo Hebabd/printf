@@ -34,4 +34,6 @@ int (*get_function(const char *specifier))(va_list)
 			return (ops[i].f);
 		i++;
 	}
+
+	return (NULL);
 }
