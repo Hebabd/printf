@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - Produces output according to a format.
  * @format: The given string.
@@ -9,12 +8,10 @@
  *
  * Return: Int.
  */
-
 int _printf(const char *format, ...)
 {
 	va_list list;
 	int count = 0;
-	int (*func)(va_list) = NULL;
 
 	va_start(list, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
