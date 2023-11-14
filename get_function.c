@@ -31,12 +31,7 @@ int (*get_function(const char *specifier))(va_list)
 	while (ops[i].specifier)
 	{
 		if (ops[i].specifier[0] == *specifier)
-
-	{
-		return (ops[i].f);
-	}
+			return (ops[i].f);
 		i++;
 	}
-
-	return (print_char);
 }

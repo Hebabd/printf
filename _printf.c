@@ -27,14 +27,10 @@ int _printf(const char *format, ...)
 			if (*format == '\0')
 				return (-1);
 			else if (func == NULL)
-			{
-				/*
-				 * _putchar(*(format - 1));
-				*_putchar(*format);
-				*count += 2;
-				*/
-				_putchar('%');
-				count++;
+			{	
+				_putchar(*(format - 1));
+				_putchar(*format);
+				count += 2;
 			}
 			else
 				count += func(list);
