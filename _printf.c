@@ -21,29 +21,29 @@ int _printf(const char *format, ...)
 		return (-1);
 	while (*format)
 	{
-		if (*format == '%' && *(format + 1) != '%')
+		if (*(format) == '%' && *(format + 1) != '%')
 		{
 			format++;
 			func = get_function(format);
-			if (*format == '\0')
+			if (*(format) == '\0')
 				return (-1);
 			else if (func == NULL)
 			{
 				_putchar(*(format - 1));
-				_putchar(*format);
+				_putchar(*(format));
 				count += 2;
 			}
 			else
 				count += func(list);
 		}
-		else if (*format == '%' && *(format + 1) == '%')
+		else if (*(format) == '%' && *(format + 1) == '%')
 		{
 			format++;
 			count += _putchar('%');
 		}
 		else
 		{
-			_putchar(*format);
+			_putchar(*(format));
 			count++;
 		}
 		format++;
